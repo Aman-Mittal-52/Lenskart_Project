@@ -49,9 +49,9 @@ function LenskartNavearchbar() {
                 onChange={(e) => { handleCollapse(true, e) }}
                 onFocus={() => { handleCollapse(true) }}
                 onBlur={() => { handleCollapse(false) }}
-                w={['100%', '350px', '200px', '500px']}
+                w={['100%', '90%', '200px', '500px']}
+                ml={[0, '5%', 0, 0]}
                 borderColor={'#000042'} />
-
 
             {/* Search Suggestions */}
             <Box
@@ -73,7 +73,7 @@ function LenskartNavearchbar() {
                     {collapseText.map((text, index) => (
                         <Text
                             key={index}
-                            fontSize={{ base: "10px" }}
+                            fontSize={{ base: "10px", lg: "20px" }}
                             my={2}
                             onClick={() => { handleCollapse(false) }}>
                             {text}
