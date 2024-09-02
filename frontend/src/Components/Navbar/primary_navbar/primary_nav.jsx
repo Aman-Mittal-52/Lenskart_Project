@@ -7,6 +7,10 @@ import {
     Text,
 } from '@chakra-ui/react'
 
+// Logo
+import main_logo from "../../../assets/main_logo.svg"
+import new_toll_number from "../../../assets/new_toll_number.webp"
+
 // SVG Icons
 import { FiShoppingBag, FiHeart } from "react-icons/fi";
 
@@ -23,12 +27,12 @@ function PrimaryNav() {
 
                 {/* Logo */}
                 <Box w={['100px', '120px', '130px', '180px']}>
-                    <Image w={'100%'} src='https://static.lenskart.com/media/desktop/img/site-images/main_logo.svg' alt='lenskart logo' />
+                    <Image w={'100%'} src={main_logo} alt='lenskart logo' />
                 </Box>
 
                 {/* Toll Free AD */}
                 <Box w={['90px', '100px', '110px', '120px']} display={{ md: "none", lg: "block" }}>
-                    <Image w={'100%'} src='https://static1.lenskart.com/media/desktop/img/republic/eye/new-toll-number.png' alt='toll-free-number' />
+                    <Image w={'100%'} src={new_toll_number} alt='toll-free-number' />
                 </Box>
 
                 {/* Search Input */}
