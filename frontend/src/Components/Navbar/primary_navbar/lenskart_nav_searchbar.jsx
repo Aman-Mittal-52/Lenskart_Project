@@ -24,15 +24,15 @@ function LenskartNavearchbar() {
 
     // Array of search suggestions
     const collapseText = [
-        "EyeGlasses",
-        "SunGlasses",
+        "Eyeglasses",
+        "Sunglasses",
         "Contact lenses",
-        "Vincent Chase EyeGlasses",
-        "Vincent Chase SunGlasses",
-        "John Jacobs EyeGlasses",
-        "John Jacobs SunGlasses",
-        "Men SunGlasses",
-        "Women SunGlasses",
+        "Vincent Chase Eyeglasses",
+        "Vincent Chase Sunglasses",
+        "John Jacobs Eyeglasses",
+        "John Jacobs Sunglasses",
+        "Men Sunglasses",
+        "Women Sunglasses",
         "Aviator",
         "Eyewear Accesories",
         "Purevision",
@@ -41,7 +41,7 @@ function LenskartNavearchbar() {
     ];
 
     return (
-        <Box position={'relative'}>
+        <Box position={'relative'} zIndex={'4'}>
 
             {/* Search Input */}
             <Input
