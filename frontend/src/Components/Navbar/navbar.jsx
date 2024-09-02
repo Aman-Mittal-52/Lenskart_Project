@@ -6,8 +6,9 @@ import {
 
 // Components
 import TopNav from './top_navbar/top_nav';
-import MobileTopNav from './top_navbar/mobile_top_nav';
+import MobileNav from './mobile_navbar/mobile_nav';
 import PrimaryNav from './primary_navbar/primary_nav';
+import ProductCategoryNav from './product_category_navbar/product_category_nav';
 
 
 // Navbar Component
@@ -16,13 +17,15 @@ function Navbar() {
     return (
         <Box>
             {/* Mobile View */}
-            <MobileTopNav />
+            <MobileNav />
 
             {/* Desktop View */}
             <Box px={[7, 5, 6, 7]}>
                 <TopNav />
                 <PrimaryNav />
             </Box>
+            <ProductCategoryNav />
+
         </Box>
     );
 }
