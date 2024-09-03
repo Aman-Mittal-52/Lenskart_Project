@@ -1,8 +1,9 @@
 import React from 'react'
 
 import { Box, Heading, Text } from '@chakra-ui/react'
+import { Link } from '@chakra-ui/react'
 
-function FooterSection({ heading, textArray }) {
+function FooterSection({ heading, textArray, links }) {
     return (
         <Box>
 
@@ -15,12 +16,15 @@ function FooterSection({ heading, textArray }) {
             <>
                 {textArray && textArray.map((text, i) => {
                     return (
-                        <Text
-                            key={i} my={[2, 4, 5, 6]}
-                            mr={[2, 4, 6, 20]}
-                            fontSize={['xs', '0.5rem', '0.75rem', 'sm']}>
-                            {text}
-                        </Text>
+                        <Link href={links[i]}>
+                            <Text
+                                key={i} my={[2, 4, 5, 6]}
+                                mr={[2, 4, 6, 20]}
+                                cursor='pointer'
+                                fontSize={['xs', '0.5rem', '0.75rem', 'sm']}>
+                                {text}
+                            </Text>
+                        </Link>
                     )
                 })}
             </>
