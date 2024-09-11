@@ -12,7 +12,7 @@ function PrimaryNavIconWithText({ text, Icon }) {
   return (
     <Flex align='center' fontWeight='thin'>
       <Icon style={iconStyle} />
-      <Text>{text}</Text>
+      <Text fontWeight={400}>{text}</Text>
     </Flex>
   )
 }
