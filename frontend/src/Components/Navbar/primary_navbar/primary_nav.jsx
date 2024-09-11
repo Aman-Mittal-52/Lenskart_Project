@@ -5,11 +5,12 @@ import {
     Flex,
     Image,
     Text,
+    Link,
 } from '@chakra-ui/react'
 
 // Logo
-import main_logo from "../../../assets/main_logo.svg"
-import new_toll_number from "../../../assets/new_toll_number.webp"
+import main_logo from "../../../assets/navbar/main_logo.svg"
+import new_toll_number from "../../../assets/navbar/new_toll_number.webp"
 
 // SVG Icons
 import { FiShoppingBag, FiHeart } from "react-icons/fi";
@@ -26,7 +27,7 @@ function PrimaryNav() {
             <Flex align={'center'} justify={'space-between'}>
 
                 {/* Logo */}
-                <Box w={['100px', '120px', '130px', '180px']}>
+                <Box w={['100px', '120px', '130px', '180px']} as={Link} href='/'>
                     <Image w={'100%'} src={main_logo} alt='lenskart logo' />
                 </Box>
 
@@ -39,8 +40,8 @@ function PrimaryNav() {
                 <LenskartNavearchbar />
 
 
-                <Text className='navbar_primary_text' fontWeight={'thin'}>Track order</Text>
-                <Text className='navbar_primary_text' fontWeight={'thin'}>Sign In & Sign Up</Text>
+                <Text className='navbar_primary_text' fontWeight={'normal'}>Track order</Text>
+                <Text className='navbar_primary_text' fontWeight={'normal'}>Sign In & Sign Up</Text>
 
                 {/* Icons */}
                 <PrimaryNavIconWithText text='Wishlist' Icon={FiHeart} />
