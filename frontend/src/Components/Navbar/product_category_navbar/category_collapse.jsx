@@ -38,12 +38,10 @@ function Glasses() {
 
     return (
         <Flex
-            border={'1px solid red'}
         >
 
             <Box
                 px='10'
-                border={'1px solid red'}
                 py='4'
             >
                 <Flex
