@@ -8,9 +8,10 @@ const EyewearModel = require('../models/eyewear.model.js');
 
 // Middlewares
 const authorize = require('../middlewares/authorize.middleware.js');
+const authentication = require('../middlewares/authenticate.middleware.js');
 
 // Product creation route
-eyewearRouter.post('/create', async (req, res) => {
+eyewearRouter.post('/create', authentication, async (req, res) => {
 
     try {
 
@@ -71,7 +72,7 @@ eyewearRouter.get('/', async (req, res) => {
 })
 
 // Product update route
-eyewearRouter.post('/update/:id', authorize(['admin']), async (req, res) => {
+eyewearRouter.post('/update/:id', authentication, authorize(['admin']), async (req, res) => {
 
     // Get the updated product data from the request body
     const { title, price, category, reviewCount, avgRating } = req.body;
@@ -103,7 +104,7 @@ eyewearRouter.post('/update/:id', authorize(['admin']), async (req, res) => {
 })
 
 // Product delete route
-eyewearRouter.post('/delete/:id', authorize(['admin']), async (req, res) => {
+eyewearRouter.post('/delete/:id', authentication, authorize(['admin']), async (req, res) => {
 
     const productID = req.params.id;
 
