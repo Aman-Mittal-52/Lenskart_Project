@@ -23,7 +23,7 @@ app.use(cors({
 }))
 
 app.use('/user', userRoute);
-app.use('/eyewear', authentication, eyewearRouter);
+app.use('/eyewear', eyewearRouter);
 
 // Home Route  (GET request)
 app.get('/', (req, res) => {
