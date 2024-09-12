@@ -54,7 +54,7 @@ eyewearRouter.get('/', async (req, res) => {
         
         if (id) {
             // Custom search by rating
-            filter.id = id;
+            filter._id = id;
         }
 
         // Get the eyewears from the database based on the filter and sorting
