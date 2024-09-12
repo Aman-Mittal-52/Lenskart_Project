@@ -35,7 +35,7 @@ eyewearRouter.post('/create', authentication, async (req, res) => {
 eyewearRouter.get('/', async (req, res) => {
 
     // Get query parameters from the request
-    const { q, rating, sortBy, page, limit } = req.query;
+    const { q, rating, id ,sortBy, page, limit } = req.query;
 
     try {
 
@@ -50,6 +50,11 @@ eyewearRouter.get('/', async (req, res) => {
         if (rating) {
             // Custom search by rating
             filter.rating = rating;
+        }
+        
+        if (id) {
+            // Custom search by rating
+            filter.id = id;
         }
 
         // Get the eyewears from the database based on the filter and sorting
