@@ -96,7 +96,7 @@ userRoute.post('/login', async (req, res) => {
                     // Generate a JWT token with user ID and secret key for 1 hour
                     const token = jwt.sign({ userId: isUser._id }, process.env.SECRET_KEY, { expiresIn: '1h' });
 
-                    // Set the token in the response header and send success message to the client
+                    // Set the token in the response body and send success message to the client
                     res.status(200).json({ message:'User login successfully' , token : `Bearer ${token}`});
 
                 } else {
