@@ -27,7 +27,7 @@ userRoute.post('/register', async (req, res) => {
     try {
 
         // Validate email
-        if(email.includes('@') && email.includes('.com')) return res.status(404).json({message:`Please enter a valid email address, ${email} isn't a valid email address`})
+        if(!email.includes('@') && !email.includes('.com')) return res.status(404).json({message:`Please enter a valid email address, ${email} isn't a valid email address`})
 
         // Check if user already exists
         const isUser = await UserModel.findOne({ email });
