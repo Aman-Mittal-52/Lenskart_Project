@@ -97,8 +97,7 @@ userRoute.post('/login', async (req, res) => {
                     const token = jwt.sign({ userId: isUser._id }, process.env.SECRET_KEY, { expiresIn: '1h' });
 
                     // Set the token in the response header and send success message to the client
-                    res.set('authorization', `Bearer ${token}`);
-                    res.status(200).send('User login successfully');
+                    res.status(200).json({ message:'User login successfully' , token : `Bearer ${token}`});
 
                 } else {
                     // send error message to the client
