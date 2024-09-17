@@ -31,13 +31,13 @@ function FooterSocialSection() {
                 mt='4'
             >
                 <Text>Version 1.0.0 || Flollow Us</Text>
-                <Link href='https://www.facebook.com/Lenskartindia' href='/'>
+                <Link href='https://www.facebook.com/Lenskartindia'>
                     <FaFacebookSquare fontSize={['10px', '15px', '20px', '30px']} />
                 </Link>
-                <Link href='https://www.instagram.com/lenskart/' href='/'>
+                <Link href='https://www.instagram.com/lenskart/' >
                     <FaInstagram fontSize={['10px', '15px', '20px', '30px']} />
                 </Link>
-                <Link href='https://x.com/lenskartME' href='/'>
+                <Link href='https://x.com/lenskartME'>
                     <FaTwitter fontSize={['10px', '15px', '20px', '30px']} />
                 </Link>
             </Flex>
