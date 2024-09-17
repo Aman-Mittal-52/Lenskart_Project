@@ -29,6 +29,11 @@ function Footer() {
 
                     <FooterSection
                         heading='Services'
+                        links={[
+                            '/stores',
+                            '/buying-guide',
+                            '/frame-size-guide'
+                        ]}
                         textArray={[
                             'Store Locator',
                             'Buying Guide',
@@ -37,6 +42,12 @@ function Footer() {
 
                     <FooterSection
                         heading='About Us'
+                        links={[
+                            '/',
+                            '/paytm-referal',
+                            '/about-us',
+                            '/offers'
+                        ]}
                         textArray={[
                             'We Are Hiring',
                             'Refer And Earn',
@@ -46,6 +57,7 @@ function Footer() {
 
                     <FooterSection
                         heading='Help'
+                        links={['/gfaq']}
                         textArray={[
                             "FAQ's"
                         ]} />
@@ -57,7 +69,7 @@ function Footer() {
             </Flex>
 
             <Divider bg='white' />
-            
+
             <FooterSocialSection />
         </Box>
     )
