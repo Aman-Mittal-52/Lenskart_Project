@@ -46,11 +46,11 @@ function HomeSlider() {
     };
 
     return (
-        <Box py={[1,2,3,3]} position='relative' zIndex='-1'>
+        <Box py={[1,2,3,3]}>
             <Slider {...settings}>
                 {imageSources.map((src, index) => (
                     <Box key={index}>
-                        <Link href=''>
+                        <Link href='/eyewears'>
                             <Image src={src} alt={`Slide ${index + 1}`} w='100%' />
                         </Link>
                     </Box>
