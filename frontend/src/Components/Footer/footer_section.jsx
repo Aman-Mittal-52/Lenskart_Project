@@ -16,9 +16,10 @@ function FooterSection({ heading, textArray, links }) {
             <>
                 {textArray && textArray.map((text, i) => {
                     return (
-                        <Link href={links[i]}>
+                        <Link key={i} href={links[i]}>
                             <Text
-                                key={i} my={[2, 4, 5, 6]}
+                                key={i} 
+                                my={[2, 3, 4, 5]}
                                 mr={[2, 4, 6, 20]}
                                 cursor='pointer'
                                 fontSize={['xs', '0.5rem', '0.75rem', 'sm']}>
