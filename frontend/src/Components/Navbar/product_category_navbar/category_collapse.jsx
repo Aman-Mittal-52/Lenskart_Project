@@ -169,7 +169,7 @@ function Home() {
                 <Text w='80%' m='auto' textAlign='center'>A certified refractionist will visit you with latest eye testing machines & 100 trial frames</Text>
 
                 <Flex align='center' justify='center' pt='100px' >
-                    <Button border='2px solid black' borderRadius={'40px'} size='lg' bg='#fff' textAlign>Book Appointment</Button>
+                    <Button border='2px solid black' borderRadius={'40px'} size='lg' bg='#fff' as='a' href='/home-test'>Book Appointment</Button>
                 </Flex>
             </Box>
         </Flex>
@@ -197,6 +197,14 @@ function Store() {
 function CategoryCollapse({ text, component }) {
     const [isCollapsed, setCollapse] = useState(false)
 
+    const handleCollapse = () => {
+        setCollapse(true)
+
+        setTimeout(() => {
+            setCollapse(false)
+        }, 2000);
+    }
+
     return (
         <Box
             px={'10px'}
@@ -207,14 +215,13 @@ function CategoryCollapse({ text, component }) {
                 fontSize={['1em', '0.4em', '0.49em', '0.7em']}
                 textTransform={'uppercase'}
                 cursor={'pointer'}
-                onMouseEnter={() => setCollapse(true)}
-                onMouseLeave={() => setCollapse(false)}
-
+                onMouseEnter={handleCollapse}
+                
                 _hover={{
                     borderBottom: '3px solid black',
                     transition: "all 0.5s ease",
                 }}
-            >
+                >
                 {text}
             </Text>
             <Box
@@ -224,9 +231,9 @@ function CategoryCollapse({ text, component }) {
                 p={3}
                 position='absolute'
                 left='5vw'
-
+                
                 display={isCollapsed ? 'block' : 'none'}
-            >
+                >
                 <Collapse in={isCollapsed}>
 
                     {
