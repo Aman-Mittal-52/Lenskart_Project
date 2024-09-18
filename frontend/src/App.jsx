@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 
 import {
@@ -10,7 +10,6 @@ import RouteManager from './Routes/routeManager'
 import Footer from './Components/Footer/footer'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <Box className='app' >
