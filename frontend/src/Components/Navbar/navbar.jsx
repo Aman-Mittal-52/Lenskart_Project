@@ -15,7 +15,8 @@ import ProductCategoryNav from './product_category_navbar/product_category_nav';
 function Navbar() {
 
     return (
-        <Box>
+        <Box w='100%' bg='#fff' position='sticky' zIndex={4} top={0}>
+
             {/* Mobile View */}
             <MobileNav />
 
