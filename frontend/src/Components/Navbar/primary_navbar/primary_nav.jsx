@@ -6,6 +6,8 @@ import {
     Image,
     Text,
     Link,
+    useDisclosure,
+    Button,
 } from '@chakra-ui/react'
 
 // Logo
@@ -18,12 +20,18 @@ import { FiShoppingBag, FiHeart } from "react-icons/fi";
 // Components
 import LenskartNavearchbar from './lenskart_nav_searchbar';
 import PrimaryNavIconWithText from './primary_nav_icon_with_text';
+import LoginSignUp from './login_signup.jsx';
 
 
 function PrimaryNav() {
 
+    const { isOpen, onClose, onToggle } = useDisclosure();
+
     return (
         <Show above='md'>
+
+            <LoginSignUp onToggle={onToggle} isOpen={isOpen} onClose={onclose} />
+
             <Flex align={'center'} justify={'space-between'}>
 
                 {/* Logo */}
@@ -41,7 +49,7 @@ function PrimaryNav() {
 
 
                 <Text className='navbar_primary_text' fontWeight={'normal'}>Track order</Text>
-                <Text className='navbar_primary_text' fontWeight={'normal'}>Sign In & Sign Up</Text>
+                <Button className='navbar_primary_text' fontWeight={'normal'} variant='ghost' cursor='pointer' onClick={onToggle} >LogIn & SignIn</Button>
 
                 {/* Icons */}
                 <PrimaryNavIconWithText text='Wishlist' Icon={FiHeart} />
