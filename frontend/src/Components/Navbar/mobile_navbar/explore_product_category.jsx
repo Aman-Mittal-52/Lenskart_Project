@@ -1,7 +1,7 @@
 import React from 'react'
-import blulogo from '../../../assets/blulogo.webp'
-import tryon3d from "../../../assets/tryon3d.webp"
-import gold_max_logo from "../../../assets/gold_max_logo.webp"
+import blulogo from '../../../assets/navbar/blulogo.webp'
+import tryon3d from "../../../assets/navbar/tryon3d.webp"
+import gold_max_logo from "../../../assets/navbar/gold_max_logo.webp"
 
 import {
     Box,
