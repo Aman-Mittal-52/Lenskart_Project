@@ -10,7 +10,9 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    MenuDivider
+    MenuDivider,
+    Button,
+    useDisclosure
 } from '@chakra-ui/react'
 
 // SVG Icons
@@ -18,6 +20,7 @@ import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
 import { FiShoppingBag, FiHeart } from "react-icons/fi";
 import LenskartNavearchbar from '../primary_navbar/lenskart_nav_searchbar';
 import ExploreProductCategory from './explore_product_category';
+import LoginSignUp from '../primary_navbar/login_signup';
 
 // Mobile Top Nav Component
 function MobileNav() {
@@ -27,8 +30,11 @@ function MobileNav() {
         margin: "12px"
     }
 
+const {isOpen,onOpen,onClose, onToggle} = useDisclosure();
+
     return (
         <Show below='md'>
+            <LoginSignUp onClose={onClose} onToggle={onToggle} isOpen={isOpen} />
             <Flex justify={'space-between'} align={'center'}>
 
                 {/* Logo */}
@@ -64,6 +70,8 @@ function MobileNav() {
                             <Link href='/partners'><MenuItem>Partner with Us</MenuItem></Link>
                             <MenuDivider />
                             <Link href='cms-queries'><MenuItem>Contact Us</MenuItem></Link>
+                            <MenuDivider />
+                            <Button variant='ghost' colorScheme='blue' w='100%' onClick={onOpen}>Login /SignUp</Button>
                         </MenuList>
                     </Menu>
 
