@@ -218,14 +218,14 @@ function Partner() {
 
                             <Box w='80%' m='auto'>
                                 <Box textAlign='start'>
-                                    <Text>Own a Successful Business</Text>
+                                    <Text fontSize={['sm','sm','md','md']}>Own a Successful Business</Text>
                                     <Text fontSize='2xl' fontWeight='bold' color='#49AA9A'>Join as a Lenskart Partner today</Text>
-                                    <Text my='6'>Lenskart is one of the fastest growing retail businesses with 500+ profitable stores across 120+ cities and 50 Lac happy customers across India. Be a proud owner of a branded Lenskart store.</Text>
+                                    <Text my='6' fontSize={['10px','sm','md','md']}>Lenskart is one of the fastest growing retail businesses with 500+ profitable stores across 120+ cities and 50 Lac happy customers across India. Be a proud owner of a branded Lenskart store.</Text>
                                     <Heading size='sm'>Returns that we deliver for our partners</Heading>
                                 </Box>
                             </Box>
 
-                            <Divider borderColor='black' />
+                            <Divider borderColor='black' my={4} />
 
 
                             <Accordion allowToggle w='80%' mx='auto' my='5' >
